@@ -1,0 +1,154 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background: #f4f8ff;
+    color: #0a1f44;
+    transition: 0.3s;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #0a1f44;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #007bff;
+  }
+  
+  /* HERO */
+  .hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,50,0.6), rgba(0,0,50,0.8)),
+                url('https://source.unsplash.com/1600x900/?space');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  
+  /* SECTIONS */
+  .section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  /* CARDS */
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* FORM */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  form input, form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* DARK MODE */
+  .dark {
+    background: #0a1f44;
+    color: white;
+  }
+  
+  .dark .navbar {
+    background: #081633;
+  }
+  
+  .dark .card {
+    background: #112a5c;
+    color: white;
+  }
+  
+  /* RESPONSIVE */
+  @media(max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
