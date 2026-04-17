@@ -21,7 +21,7 @@ body {
   background: white;
   position: sticky;
   top: 0;
-  z-index: 1000; /* Keeps navbar above content */
+  z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -44,15 +44,14 @@ body {
   color: #007bff;
 }
 
-/* HERO - UPDATED WITH SPACE BG */
+/* HERO */
 .hero {
   height: 90vh;
-  /* Dark overlay + High-res Space Image */
   background: linear-gradient(rgba(0, 0, 50, 0.65), rgba(0, 0, 50, 0.85)),
               url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Optional: adds a slight parallax effect */
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,9 +100,10 @@ body {
   background: white;
   padding: 20px;
   border-radius: 15px;
-  width: 280px;
+  width: 300px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   transition: 0.3s;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -114,6 +114,38 @@ body {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 15px;
+}
+
+/* MISSION INFO BUTTONS */
+.info-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.info-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+.extra-info {
+  display: none;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+  text-align: left;
+}
+
+.show-info {
+  display: block;
 }
 
 /* FORM */
@@ -160,40 +192,16 @@ footer {
   color: white;
 }
 
-.dark .navbar {
-  background: #081633;
-}
-
-.dark .navbar a {
-  color: #fff;
-}
-
-.dark .card {
-  background: #112a5c;
-  color: white;
-}
-
-.dark footer {
-  background: #081633;
-}
+.dark .navbar { background: #081633; }
+.dark .navbar a { color: #fff; }
+.dark .card { background: #112a5c; color: white; }
+.dark footer { background: #081633; }
+.dark .extra-info { color: #ccc; }
+.dark .info-btn { border-color: #4da3ff; color: #4da3ff; }
 
 /* RESPONSIVE */
 @media(max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .nav-links {
-    padding: 0;
-  }
-  
-  .nav-links li {
-    margin: 0 10px;
-  }
+  .hero h1 { font-size: 2.2rem; }
+  .navbar { flex-direction: column; align-items: center; gap: 10px; }
+  .nav-links li { margin: 0 10px; }
 }
